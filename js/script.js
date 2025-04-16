@@ -29,6 +29,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Add certifications link to navigation
+    const navList = document.querySelector('.nav-menu ul');
+    if (navList) {
+        const projectsItem = Array.from(navList.children).find(item => 
+            item.querySelector('a').getAttribute('href') === '#projects'
+        );
+        
+        if (projectsItem) {
+            const certItem = document.createElement('li');
+            const certLink = document.createElement('a');
+            certLink.setAttribute('href', '#certifications');
+            certLink.textContent = 'Certifications';
+            certItem.appendChild(certLink);
+            navList.insertBefore(certItem, projectsItem);
+        }
+    }
+    
     // Add smooth scrolling to all navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -77,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add animation when scrolling into view
     const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.project-card, .skill-category, .timeline-item');
+        const elements = document.querySelectorAll('.project-card, .skill-category, .timeline-item, .certification-card');
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;

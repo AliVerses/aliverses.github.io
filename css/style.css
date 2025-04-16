@@ -481,6 +481,8 @@ ul {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -510,6 +512,9 @@ ul {
 
 .project-info {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-info h3 {
@@ -519,6 +524,7 @@ ul {
 
 .project-info p {
     margin: 1rem 0;
+    flex-grow: 1;
 }
 
 .project-tech {
@@ -539,6 +545,143 @@ ul {
 .project-links {
     display: flex;
     gap: 1rem;
+    margin-top: auto;
+}
+
+.project-links a {
+    flex: 1;
+    text-align: center;
+    font-weight: 500;
+}
+
+.project-links a.btn.small-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    display: inline-block;
+    min-width: 100px;
+    color: var(--amazon-light-text);
+}
+
+.project-links a.btn.small-btn.secondary-btn {
+    color: var(--amazon-dark-text);
+}
+
+.project-links a.btn.small-btn.secondary-btn:hover {
+    color: var(--amazon-light-text);
+}
+
+/* Certifications Section */
+.certifications {
+    padding: 6rem 0;
+    background-color: #fff;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.certification-card {
+    background-color: var(--amazon-background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.certification-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+}
+
+.certification-logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.certification-logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.certification-logo i {
+    font-size: 4rem;
+    color: var(--amazon-secondary);
+}
+
+.certification-logo .fa-aws {
+    color: #FF9900;
+}
+
+.certification-logo .fa-github {
+    color: #24292e;
+}
+
+.certification-logo .fa-microsoft {
+    color: #00A4EF;
+}
+
+.certification-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--amazon-secondary);
+}
+
+.certification-card p {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--amazon-dark-text);
+}
+
+.certification-badge {
+    display: inline-block;
+    background-color: var(--amazon-success);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.certification-date {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.verify-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--amazon-orange);
+    color: var(--amazon-light-text);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.verify-btn:hover {
+    background-color: var(--amazon-button-hover);
+    color: var(--amazon-light-text);
 }
 
 /* Contact Section */
